@@ -16,8 +16,10 @@ class SessionController{
         
 
         let user = await User.findOne({email:email});
+        //console.log(user);
+        //return false;
         if(!user){
-            let user = await User.create({email:email});
+            user = await User.create({email:email});
         }
 
         return res.json(user);
