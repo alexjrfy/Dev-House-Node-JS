@@ -1,7 +1,7 @@
-//const { Router } = require('express');
+// const { Router } = require('express');
 import { Router } from 'express';
 import multer from 'multer';
-import uploadConfig from "./config/upload";
+import uploadConfig from './config/upload';
 
 import SessionController from './controllers/SessionController';
 import HouseController from './controllers/HouseController';
@@ -24,6 +24,5 @@ routes.post('/houses/:house_id/reserve', ReserveController.store);
 routes.get('/reserves', ReserveController.index);
 routes.delete('/reserves', ReserveController.destroy);
 
-
-//module.exports = routes;
+// module.exports = routes;
 export default routes;
